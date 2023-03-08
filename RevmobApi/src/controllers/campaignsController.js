@@ -30,8 +30,6 @@ const CampaignsController = (app) => {
   });
 
   app.get("/campaigns", async (req, res) => {
-    // const { price } = req.query;
-    //const results = price ? campaigns.filter(campaign => campaign.price.MathMax(...==))
     try {
       const campaigns = await CampaignsModel.find();
       const valueMax = Math.max(campaigns.price);
